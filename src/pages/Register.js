@@ -1,5 +1,6 @@
 import React from "react";
-import kIcon from "../images/k_icon.png"
+import { Link } from "react-router-dom";
+import kIcon from "../images/k_icon.png";
 const Register = () => {
     return(
         <div className="formContainer">
@@ -26,7 +27,7 @@ const Register = () => {
                    
                     <button className="login_button">Sign Up</button>
                 </form>
-                <p>Already have an account?Login</p>
+                <p>Already have an account?<Link to='/'>Log in</Link></p>
             </div>
         </div>
     );

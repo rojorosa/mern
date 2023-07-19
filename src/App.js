@@ -3,21 +3,28 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/login";
 
-import './chat.css';
-import './home.css';
-import './navbar.css';
-import './register.css';
-import './search.css';
-import './messages.css';
-import './input.css';
-import './message.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './styles/chat.css';
+import './styles/home.css';
+import './styles/input.css';
+import './styles/message.css';
+import './styles/messages.css';
+import './styles/navbar.css';
+import './styles/register.css';
+import './styles/search.css';
 
-function App() {
+export const App = () => {
   return (
     <div>
-    <Register/>
-    <Login/>
-    <Home/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/home"  element={<Home />} />
+
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }
